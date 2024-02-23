@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Spgunlp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorBW">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Visit icons. -->
+        <item name="observations">@drawable/observations_dark</item>
+        <item name="checklist">@drawable/checklist_dark</item>
+        <item name="done">@drawable/done_dark</item>
+        <!-- Observations view icons. -->
+        <item name="btn_send">@drawable/send_btn_dark</item>
+    </style>
+
+    <style name="ThemeMaterialCalendar" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="android:windowFullscreen">false</item>
+    </style>
+</resources>

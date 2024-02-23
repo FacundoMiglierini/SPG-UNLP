@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/osmmap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:id="@+id/crosshair"
+        android:contentDescription="@string/crosshair"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/crosshair"
+        android:layout_height="150dp">
+
+    </ImageView>
+
+    <Button
+        android:text="@string/dibujar"
+        android:layout_margin="5dp"
+        android:id="@+id/draw_btn"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+    </Button>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/save_btn"
+            android:text="@string/guardar"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+        </Button>
+        <Button
+            android:text="@string/marcar"
+            android:id="@+id/mark_btn"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+        </Button>
+        <Button
+            android:text="@string/cancelar"
+            android:id="@+id/cancel_btn"
+            android:visibility="gone"
+            android:layout_weight="1"
+            android:backgroundTint="@color/red"
+            android:textColor="@color/white"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </Button>
+
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/current_location_fab"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="65dp"
+        android:layout_marginEnd="20dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/baseline_my_location_24"
+        android:backgroundTint="?attr/colorPrimary"
+        android:visibility="gone"
+        app:backgroundTint="?attr/colorPrimary"
+        app:tint="?attr/colorOnPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+</RelativeLayout>

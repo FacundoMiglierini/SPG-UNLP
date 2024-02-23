@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="6dp">
+            <ImageView
+                android:id="@+id/icon_image_view"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:contentDescription="@string/imagen_visita"
+                android:paddingHorizontal="14dp"
+                android:src="@drawable/checklist_dark"
+                android:layout_width="100dp"
+                android:layout_height="100dp"/>
+
+            <LinearLayout
+                android:id="@+id/linear_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@id/icon_image_view"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/visit_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ejemplo visita"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorBW"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/visit_date_modif"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ultima modificacion:03/12/2023"
+                    android:textSize="14sp"
+                    android:textColor="?attr/colorBW"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+        
+
+</androidx.cardview.widget.CardView>

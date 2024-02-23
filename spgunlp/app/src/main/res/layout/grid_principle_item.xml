@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/layout_stat_principle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="200dp"
+            android:id="@+id/cardview_approvedprinciples"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/cardview_light_background"
+            android:layout_margin="12dp">
+
+            <TextView
+                android:id="@+id/principle_percentage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_margin="8dp"
+                android:text="99%"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/principle_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Principio"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText">
+        </TextView>
+
+    </LinearLayout>
+
+    </LinearLayout>

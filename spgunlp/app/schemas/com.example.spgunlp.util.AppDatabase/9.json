@@ -1,0 +1,582 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 9,
+    "identityHash": "8dd4655ca64fe0b2d8ce41ebc45371f7",
+    "entities": [
+      {
+        "tableName": "poligonos_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `idVisit` INTEGER NOT NULL, `nombre` TEXT, `coordenadas` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idVisit",
+            "columnName": "idVisit",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "coordenadas",
+            "columnName": "coordenadas",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "perfil_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`email` TEXT NOT NULL, `nombre` TEXT NOT NULL, `posicion` TEXT NOT NULL, `celular` TEXT NOT NULL, `organizacion` TEXT NOT NULL, `rol` TEXT NOT NULL, PRIMARY KEY(`email`))",
+        "fields": [
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "posicion",
+            "columnName": "posicion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "celular",
+            "columnName": "celular",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "organizacion",
+            "columnName": "organizacion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rol",
+            "columnName": "rol",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "email"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "visits_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER, `comentarioImagenes` TEXT, `estadoVisita` TEXT, `fechaActualizacion` TEXT, `fechaCreacion` TEXT, `fechaVisita` TEXT, `usuarioOperacion` TEXT, `quinta_id` INTEGER, `quinta_comentarios` TEXT, `quinta_direccion` TEXT, `quinta_fechaCreacion` TEXT, `quinta_fechaUltimaVisita` TEXT, `quinta_imagenes` TEXT, `quinta_nombreProductor` TEXT, `quinta_organizacion` TEXT, `quinta_selloGarantia` TEXT, `quinta_superficieAgroecologiaCampo` INTEGER, `quinta_superficieAgroecologiaInvernaculo` INTEGER, `quinta_superficieTotalCampo` INTEGER, `quinta_superficieTotalInvernaculo` INTEGER, `quinta_usuarioOperacion` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "comentarioImagenes",
+            "columnName": "comentarioImagenes",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "estadoVisita",
+            "columnName": "estadoVisita",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "fechaActualizacion",
+            "columnName": "fechaActualizacion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "fechaCreacion",
+            "columnName": "fechaCreacion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "fechaVisita",
+            "columnName": "fechaVisita",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "usuarioOperacion",
+            "columnName": "usuarioOperacion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quintaResponse.id",
+            "columnName": "quinta_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quintaResponse.comentarios",
+            "columnName": "quinta_comentarios",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quintaResponse.direccion",
+            "columnName": "quinta_direccion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quintaResponse.fechaCreacion",
+            "columnName": "quinta_fechaCreacion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quintaResponse.fechaUltimaVisita",
+            "columnName": "quinta_fechaUltimaVisita",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quintaResponse.imagenes",
+            "columnName": "quinta_imagenes",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quintaResponse.nombreProductor",
+            "columnName": "quinta_nombreProductor",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quintaResponse.organizacion",
+            "columnName": "quinta_organizacion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quintaResponse.selloGarantia",
+            "columnName": "quinta_selloGarantia",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quintaResponse.superficieAgroecologiaCampo",
+            "columnName": "quinta_superficieAgroecologiaCampo",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quintaResponse.superficieAgroecologiaInvernaculo",
+            "columnName": "quinta_superficieAgroecologiaInvernaculo",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quintaResponse.superficieTotalCampo",
+            "columnName": "quinta_superficieTotalCampo",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quintaResponse.superficieTotalInvernaculo",
+            "columnName": "quinta_superficieTotalInvernaculo",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quintaResponse.usuarioOperacion",
+            "columnName": "quinta_usuarioOperacion",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "changes_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`email` TEXT NOT NULL, `visit` TEXT NOT NULL, `visitId` INTEGER NOT NULL, PRIMARY KEY(`email`, `visitId`))",
+        "fields": [
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "visit",
+            "columnName": "visit",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "visitId",
+            "columnName": "visitId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "email",
+            "visitId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "images_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER, `contenido` BLOB, `tipo` TEXT, `visitId` INTEGER, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "contenido",
+            "columnName": "contenido",
+            "affinity": "BLOB",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tipo",
+            "columnName": "tipo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "visitId",
+            "columnName": "visitId",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "users_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER, `email` TEXT, `celular` TEXT, `nombre` TEXT, `organizacion` TEXT, `posicionResponse` TEXT, `roles` TEXT, `estado` INTEGER, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "celular",
+            "columnName": "celular",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "organizacion",
+            "columnName": "organizacion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "posicionResponse",
+            "columnName": "posicionResponse",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "roles",
+            "columnName": "roles",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "estado",
+            "columnName": "estado",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "parameters_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`aspiracionesFamiliares` TEXT, `comentarios` TEXT, `cumple` INTEGER, `id` INTEGER, `nombre` TEXT, `sugerencias` TEXT, `visitId` INTEGER, `parameter_habilitado` INTEGER, `parameter_id` INTEGER, `parameter_nombre` TEXT, `parameter_principioAgroecologico` TEXT, `parameter_situacionEsperable` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "aspiracionesFamiliares",
+            "columnName": "aspiracionesFamiliares",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "comentarios",
+            "columnName": "comentarios",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "cumple",
+            "columnName": "cumple",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sugerencias",
+            "columnName": "sugerencias",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "visitId",
+            "columnName": "visitId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "parametro.habilitado",
+            "columnName": "parameter_habilitado",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "parametro.id",
+            "columnName": "parameter_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "parametro.nombre",
+            "columnName": "parameter_nombre",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "parametro.principioAgroecologico",
+            "columnName": "parameter_principioAgroecologico",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "parametro.situacionEsperable",
+            "columnName": "parameter_situacionEsperable",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "visit_user_join",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`visitId` INTEGER NOT NULL, `userId` INTEGER NOT NULL, PRIMARY KEY(`visitId`, `userId`))",
+        "fields": [
+          {
+            "fieldPath": "visitId",
+            "columnName": "visitId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userId",
+            "columnName": "userId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "visitId",
+            "userId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "principles_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`habilitado` INTEGER, `id` INTEGER, `nombre` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "habilitado",
+            "columnName": "habilitado",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "messages_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `idVisit` INTEGER NOT NULL, `idPrinciple` INTEGER NOT NULL, `content_type` TEXT, `data` TEXT, `date` TEXT, `email` TEXT, `nombre` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idVisit",
+            "columnName": "idVisit",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idPrinciple",
+            "columnName": "idPrinciple",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "content_type",
+            "columnName": "content_type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "data",
+            "columnName": "data",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "date",
+            "columnName": "date",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sender.email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sender.nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '8dd4655ca64fe0b2d8ce41ebc45371f7')"
+    ]
+  }
+}

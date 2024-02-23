@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_login">
+
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.example.spgunlp.ui.login.LoginFragment"
+        android:label="@string/iniciar_sesion"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_active"
+            app:destination="@id/navigation_active" />
+        <action
+            android:id="@+id/action_navigation_login_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_active"
+        android:name="com.example.spgunlp.ui.active.ActiveFragment"
+        android:label="@string/title_active"
+        tools:layout="@layout/fragment_active" >
+        <action
+            android:id="@+id/action_navigation_active_to_visitActivity"
+            app:destination="@id/visitActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.spgunlp.ui.login.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <activity
+        android:id="@+id/visitActivity"
+        android:name="com.example.spgunlp.ui.visit.VisitActivity"
+        android:label="VisitActivity" />
+    <fragment
+        android:id="@+id/inactiveFragment"
+        android:name="com.example.spgunlp.ui.inactive.InactiveFragment"
+        android:label="fragment_inactive"
+        tools:layout="@layout/fragment_inactive" />
+    <fragment
+        android:id="@+id/statsFragment"
+        android:name="com.example.spgunlp.ui.stats.StatsFragment"
+        android:label="fragment_stats"
+        tools:layout="@layout/fragment_stats" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.spgunlp.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

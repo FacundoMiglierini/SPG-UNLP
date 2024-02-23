@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_login">
+
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.example.spgunlp.ui.login.LoginFragment"
+        android:label="@string/iniciar_sesion"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/navigation_active"
+        android:name="com.example.spgunlp.ui.active.ActiveFragment"
+        android:label="@string/title_active"
+        tools:layout="@layout/fragment_active" />
+
+    <fragment
+        android:id="@+id/navigation_inactive"
+        android:name="com.example.spgunlp.ui.inactive.InactiveFragment"
+        android:label="@string/title_inactive"
+        tools:layout="@layout/fragment_inactive" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.spgunlp.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/navigation_stats"
+        android:name="com.example.spgunlp.ui.stats.StatsFragment"
+        android:label="@string/title_stats"
+        tools:layout="@layout/fragment_stats" />
+</navigation>

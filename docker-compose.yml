@@ -1,0 +1,31 @@
+version: "3"
+services: 
+  springboot-app:
+    container_name: spg
+    image: leandroferreyra22/agroecologia:v1
+    build: .
+    restart: always
+    ports:
+      - 9090:8080
+    networks:
+      spring-network:
+    environment:
+      MYSQL_HOST: mysqldb
+      MYSQL_PORT: 3306
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root 
+    depends_on:
+      - mysqldb
+      
+  mysqldb:
+    container_name: mysqldb
+    image: mysql
+    ports:
+      - 3307:3306
+    networks:
+      spring-network:
+    environment:
+      MYSQL_DATABASE: spg_agroecologia
+      MYSQL_ROOT_PASSWORD: root
+networks:
+    spring-network:

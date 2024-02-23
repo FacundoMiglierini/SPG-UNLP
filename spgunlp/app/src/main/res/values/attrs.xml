@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="observations" format="reference"/>.
+    <attr name="checklist" format="reference"/>.
+    <attr name="done" format="reference"/>.
+    <attr name="btn_send" format="reference"/>.
+    <attr name="colorBW" format="reference"/>
+
+</resources>
+

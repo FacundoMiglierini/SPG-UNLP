@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:strokeWidth="2dp"
+    app:strokeColor="@color/red"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/stateBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/red"
+            android:padding="12dp">
+
+            <!-- Title, secondary and supporting text -->
+            <TextView
+                android:id="@+id/principle_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/estado_del_principio"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <!-- Title, secondary and supporting text -->
+            <TextView
+                android:id="@+id/principle_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_del_principio"
+                android:textAppearance="?attr/textAppearanceBody1"
+                />
+        </LinearLayout>
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/principle_actions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/btn_observations"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:chipCornerRadius="10dp"
+                    app:ensureMinTouchTargetSize="false"
+                    app:chipIcon="@drawable/observations_light"
+                    android:text="@string/observaciones"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/btn_checklist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:chipCornerRadius="10dp"
+                    app:ensureMinTouchTargetSize="false"
+                    app:chipIcon="@drawable/checklist_light"
+                    android:text="@string/checklist"/>
+            </com.google.android.material.chip.ChipGroup>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

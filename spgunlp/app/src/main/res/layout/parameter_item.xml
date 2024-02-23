@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+<CheckBox
+    android:id="@+id/checkbox"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:checked="false"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:text="item"
+    tools:ignore="HardcodedText" />
+<com.google.android.material.divider.MaterialDivider
+    android:id="@+id/divider"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:dividerInsetStart="16dp"
+    app:dividerInsetEnd="16dp"/>
+</LinearLayout>

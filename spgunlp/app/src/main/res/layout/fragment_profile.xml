@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="60dp"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/profile_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/fondo_del_perfil"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/background_profile"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="100dp"
+                    app:cardElevation="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/profile_title">
+
+                    <ImageView
+                        android:id="@+id/profile_pic"
+                        android:layout_width="150dp"
+                        android:contentDescription="@string/imagen_de_perfil"
+                        android:layout_height="150dp"
+                        android:src="@drawable/profile_picture" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/profile_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="30dp"
+                    android:letterSpacing="0.05"
+                    android:text="@string/perfil"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <LinearLayout
+                    android:id="@+id/name_position_layout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.skydoves.androidveil.VeilLayout
+                        android:id="@+id/name_position_veil"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:foregroundGravity="center"
+                        app:veilLayout_baseAlpha="0.6"
+                        app:veilLayout_dropOff="0.5"
+                        app:veilLayout_highlightAlpha="1.0"
+                        app:veilLayout_radius="6dp"
+                        app:veilLayout_shimmerEnable="true"
+                        app:veilLayout_veiled="true">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/nombre"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_gravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+                <TextView
+                    android:id="@+id/profile_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/posicion"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_name" />
+                        </LinearLayout>
+                    </com.skydoves.androidveil.VeilLayout>
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/profile_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:animateLayoutChanges="true"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/name_position_layout">
+                    <com.skydoves.androidveil.VeilLayout
+                        android:id="@+id/profile_veil"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:veilLayout_baseAlpha="0.6"
+                        app:veilLayout_dropOff="0.5"
+                        app:veilLayout_highlightAlpha="1.0"
+                        app:veilLayout_radius="6dp"
+                        app:veilLayout_shimmerEnable="true"
+                        app:veilLayout_veiled="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <GridLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="20dp"
+                            android:columnCount="2"
+                            android:orientation="horizontal"
+                            android:useDefaultMargins="true">
+
+                            <TextView
+                                android:id="@+id/label_email"
+                                android:text="@string/email_dots"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="?attr/colorBW"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/profile_email"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:ellipsize="none"
+                                android:maxLines="100"
+                                android:scrollHorizontally="false"
+                                android:textColor="?attr/colorBW"
+                                android:textSize="18sp"
+                                android:text="grupo7@consumidor.com"
+                                tools:ignore="HardcodedText" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:contentDescription="@string/separador"
+                                android:layout_columnSpan="2"
+                                android:src="@drawable/separator_profile" />
+
+
+                            <TextView
+                                android:id="@+id/label_cellphone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/celular_dots"
+                                android:textColor="?attr/colorBW"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/profile_cellphone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="22100000000"
+                                android:textColor="?attr/colorBW"
+                                android:textSize="18sp"
+                                tools:ignore="HardcodedText" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:contentDescription="@string/separador"
+                                android:layout_columnSpan="2"
+                                android:src="@drawable/separator_profile" />
+
+                            <TextView
+                                android:id="@+id/label_organization"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/org"
+                                android:textColor="?attr/colorBW"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/profile_organization"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="Organizacion"
+                                android:textColor="?attr/colorBW"
+                                android:textSize="18sp"
+                                tools:ignore="HardcodedText" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_columnSpan="2"
+                                android:contentDescription="@string/separador"
+                                android:src="@drawable/separator_profile" />
+
+                            <TextView
+                                android:id="@+id/label_role"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/rol"
+                                android:textColor="?attr/colorBW"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/profile_role"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="Rol"
+                                android:textColor="?attr/colorBW"
+                                android:textSize="18sp"
+                                tools:ignore="HardcodedText" />
+
+
+                        </GridLayout>
+
+
+                    </LinearLayout>
+                    </com.skydoves.androidveil.VeilLayout>
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/btn_cerrar_sesion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="20dp"
+                    android:text="@string/cerrar_sesion"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_data" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
