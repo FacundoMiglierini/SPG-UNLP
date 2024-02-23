@@ -1,8 +1,8 @@
-# Laboratorio de Software - Grupo_7
+# Laboratorio de Software - Grupo\_7
 
 *Desarrollo de app Android para la gestión de visitas a Sistemas Participativos de Garantía*
 
-## Proyecto realizado para la materia Laboratorio de Software 2023, UNLP
+## Proyecto realizado para la materia Laboratorio de Software 2023 - UNLP
 
 Desarrolladores:
 - Facundo Miglierini
@@ -16,10 +16,14 @@ Contenido:
 
 Cómo probar la app:
 1. Ejecutar el archivo compose con el comando `docker-compose up`.
-2. Obtener la IP privada de la PC donde se ejecutará la aplicación.
+2. Obtener la IP privada de la computadora donde se preparará la aplicación.
 3. Dentro de Android Studio, abrir la carpeta "spgunlp". 
-4. Modificar la variable `BASE_URL` ubicada dentro de "local.properties" con el siguiente valor:
-`BASE_URL = http://ip:9090`, donde `ip` corresponde a la IP obtenida en el segundo paso.
+4. Generar un archivo "local.properties" que contenga lo siguiente:
+
+`sdk.dir={location}`, donde `location` corresponde a la ubicación de Android Sdk
+
+`BASE_URL = http://{ip}:9090`, donde `ip` corresponde a la IP obtenida en el segundo paso.
+
 5. Ejecutar la aplicación con el botón "Run" presente en Android Studio. 
 6. Es posible iniciar sesión con las siguientes credenciales:
  - Mail: grupo7@tecnico.com 
